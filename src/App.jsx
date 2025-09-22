@@ -6,7 +6,7 @@ import ArithmeticPage from "./pages/ArithmeticPage";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/converter1">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/conversion" element={<ConversionPage />} />
