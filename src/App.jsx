@@ -10,6 +10,9 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/conversion" element={<ConversionPage />} />
       <Route path="/arithmetic" element={<ArithmeticPage />} />
+
+      {/* fallback route: anything unknown goes to Home */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
