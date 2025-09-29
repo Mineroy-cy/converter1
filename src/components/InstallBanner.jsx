@@ -30,14 +30,17 @@ export default function InstallBanner() {
 
     window.addEventListener("beforeinstallprompt", handler);
 
-    // Handle iOS Safari
+  // Delay check slightly to ensure DOM is loaded
+  setTimeout(() => {
     if (isIos() && !isInStandaloneMode()) {
+      console.log("✅ iOS Safari detected, showing install banner");
       setShowIosBanner(true);
     }
+  }, 500);
 
-    return () => {
-      window.removeEventListener("beforeinstallprompt", handler);
-    };
+  return () => {
+    window.removeEventListener("beforeinstallprompt", handler);
+  };
   }, []);
 
   const handleInstallClick = async () => {
