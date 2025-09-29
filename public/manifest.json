@@ -1,7 +1,7 @@
 {
   "name": "Number System Toolkit",
   "short_name": "NumToolkit",
-  "start_url": "/#/",
+  "start_url": "/converter1/#/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",
