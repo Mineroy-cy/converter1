@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 
 // Helper: detect iOS Safari
 function isIos() {
-  return (
-    /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase()) &&
-    !window.MSStream
-  );
+  const ua = window.navigator.userAgent.toLowerCase();
+  return /iphone|ipod/.test(ua) || 
+         (ua.includes("macintosh") && "ontouchend" in document);
 }
+
 
 function isInStandaloneMode() {
   return (
