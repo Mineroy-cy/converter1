@@ -4,6 +4,7 @@ import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import Home from "./pages/Home";
 import ConversionPage from "./pages/ConversionPage";
 import ArithmeticPage from "./pages/ArithmeticPage";
+import InstallBanner from "./components/InstallBanner";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         {/* fallback route: redirect unknown URLs to Home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <InstallBanner />
     </Router>
   );
 }
