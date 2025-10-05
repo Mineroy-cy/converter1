@@ -28,19 +28,39 @@ export default function ArithmeticTool() {
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "0 auto", padding: "20px" }}>
-      <h2>Binary Arithmetic</h2>
+    <div className="card">
+      <h2 className="subtitle">Binary Arithmetic</h2>
 
-      <input type="text" placeholder="Binary A" value={a} onChange={(e) => setA(e.target.value)} style={{ width: "100%", marginBottom: "10px", padding: "8px" }} />
-      <input type="text" placeholder="Binary B" value={b} onChange={(e) => setB(e.target.value)} style={{ width: "100%", marginBottom: "10px", padding: "8px" }} />
+      <input
+        type="text"
+        placeholder="Binary A"
+        value={a}
+        onChange={(e) => setA(e.target.value)}
+        className="input"
+      />
+      <input
+        type="text"
+        placeholder="Binary B"
+        value={b}
+        onChange={(e) => setB(e.target.value)}
+        className="input"
+      />
 
-      <select value={operation} onChange={(e) => setOperation(e.target.value)} style={{ width: "100%", padding: "8px", marginBottom: "10px" }}>
-        {operations.map(op => <option key={op} value={op}>{op.toUpperCase()}</option>)}
+      <select
+        value={operation}
+        onChange={(e) => setOperation(e.target.value)}
+        className="input"
+      >
+        {operations.map((op) => (
+          <option key={op} value={op}>{op.toUpperCase()}</option>
+        ))}
       </select>
 
-      <button onClick={handleCompute} style={{ width: "100%", padding: "10px" }}>Compute</button>
+      <button onClick={handleCompute} className="btn-convert">
+        Compute
+      </button>
 
-      {result && <h3 style={{ marginTop: "20px" }}>Result: {result}</h3>}
+      {result && <h3 className="result">Result: {result}</h3>}
     </div>
   );
 }

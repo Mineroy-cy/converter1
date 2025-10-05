@@ -1,0 +1,201 @@
+/* ===== Global Reset ===== */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #064e3b); /* dark → deep green */
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Layout Helpers ===== */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #22c55e, #86efac); /* green gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+/* ===== Buttons & Links ===== */
+.btn,
+.link {
+  display: block;
+  padding: 1rem 1.25rem;        /* larger buttons */
+  text-align: center;
+  border-radius: 0.65rem;
+  font-weight: 700;             /* bolder text */
+  text-decoration: none;
+  color: #ffffff;               /* pure white text */
+  font-size: 1rem;              /* bigger text */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6); /* contrast shadow */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, background 0.3s ease-in-out, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover,
+.link:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.5);
+}
+
+.btn.full {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+/* Green buttons */
+.btn-green,
+.link-green {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+.btn-green:hover,
+.link-green:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+/* Alternate lime-green buttons */
+.btn-alt,
+.link-alt {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+}
+.btn-alt:hover,
+.link-alt:hover {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+/* ===== Input & Select ===== */
+.input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #14532d; /* dark green border */
+  background: #052e16; /* very dark green */
+  color: white;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Card (used for tools) ===== */
+.card {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, #064e3b, #052e16);
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+  color: white;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Messages ===== */
+.error {
+  color: #f87171; /* red-400 */
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.result {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #bbf7d0; /* light green */
+}
+
+/* ===== Install Banner Styles ===== */
+.install-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, background 0.3s ease;
+  z-index: 1000;
+}
+.install-btn:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  transform: scale(1.05);
+}
+
+.ios-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(145deg, #064e3b, #052e16);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-top: 2px solid #22c55e;
+  font-size: 0.95rem;
+  color: #d1fae5; /* light green text */
+  box-shadow: 0px -2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.ios-banner p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  color: #f87171; /* red-400 */
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* ===== Convert Button ===== */
+.btn-convert {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.65rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  background: linear-gradient(135deg, #22c55e, #16a34a); /* bright green */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-convert:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d); /* deeper green */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.5), 0 0 12px #22c55e88;
+}

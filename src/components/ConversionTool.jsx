@@ -31,30 +31,44 @@ export default function ConversionTool() {
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "0 auto", padding: "20px" }}>
-      <h2>Conversion Tool</h2>
+    <div className="card">
+      <h2 className="subtitle">Conversion Tool</h2>
 
       <input
         type="text"
         placeholder={`Enter ${fromBase.toUpperCase()} number`}
         value={input}
         onChange={handleChange}
-        style={{ width: "100%", padding: "8px", marginBottom: "5px" }}
+        className="input"
       />
-      {error && <p style={{ color: "red", marginBottom: "10px" }}>{error}</p>}
+      {error && <p className="error">{error}</p>}
 
-      <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
-        <select value={fromBase} onChange={(e) => setFromBase(e.target.value)} style={{ flex: 1, padding: "8px" }}>
-          {bases.map(base => <option key={base} value={base}>{base.toUpperCase()}</option>)}
+      <div className="row">
+        <select
+          value={fromBase}
+          onChange={(e) => setFromBase(e.target.value)}
+          className="input"
+        >
+          {bases.map((b) => (
+            <option key={b} value={b}>{b.toUpperCase()}</option>
+          ))}
         </select>
-        <select value={toBase} onChange={(e) => setToBase(e.target.value)} style={{ flex: 1, padding: "8px" }}>
-          {bases.map(base => <option key={base} value={base}>{base.toUpperCase()}</option>)}
+        <select
+          value={toBase}
+          onChange={(e) => setToBase(e.target.value)}
+          className="input"
+        >
+          {bases.map((b) => (
+            <option key={b} value={b}>{b.toUpperCase()}</option>
+          ))}
         </select>
       </div>
 
-      <button onClick={handleConvert} style={{ width: "100%", padding: "10px" }}>Convert</button>
+      <button onClick={handleConvert}className="btn-convert">
+        Convert
+      </button>
 
-      {result && <h3 style={{ marginTop: "20px" }}>Result: {result}</h3>}
+      {result && <h3 className="result">Result: {result}</h3>}
     </div>
   );
 }
