@@ -24,20 +24,21 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* ===== Buttons & Links ===== */
 .btn,
 .link {
   display: block;
-  padding: 1rem 1.25rem;        /* larger buttons */
+  padding: 1rem 1.25rem;
   text-align: center;
   border-radius: 0.65rem;
-  font-weight: 700;             /* bolder text */
+  font-weight: 700;
   text-decoration: none;
-  color: #ffffff;               /* pure white text */
-  font-size: 1rem;              /* bigger text */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6); /* contrast shadow */
+  color: #ffffff;
+  font-size: 1rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
   box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
   transition: transform 0.2s ease, background 0.3s ease-in-out, box-shadow 0.3s ease;
   cursor: pointer;
@@ -81,15 +82,9 @@ select {
   padding: 0.75rem;
   margin-bottom: 0.75rem;
   border-radius: 0.5rem;
-  border: 1px solid #14532d; /* dark green border */
-  background: #052e16; /* very dark green */
+  border: 1px solid #14532d;
+  background: #052e16;
   color: white;
-}
-
-.row {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
 }
 
 /* ===== Card (used for tools) ===== */
@@ -113,7 +108,7 @@ select {
 
 /* ===== Messages ===== */
 .error {
-  color: #f87171; /* red-400 */
+  color: #f87171;
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
 }
@@ -122,7 +117,7 @@ select {
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #bbf7d0; /* light green */
+  color: #bbf7d0;
 }
 
 /* ===== Install Banner Styles ===== */
@@ -130,12 +125,13 @@ select {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.85rem 1.35rem;
   background: linear-gradient(135deg, #22c55e, #16a34a);
   color: white;
   border: none;
   border-radius: 0.75rem;
   font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
   transition: transform 0.2s ease, background 0.3s ease;
@@ -156,7 +152,7 @@ select {
   text-align: center;
   border-top: 2px solid #22c55e;
   font-size: 0.95rem;
-  color: #d1fae5; /* light green text */
+  color: #d1fae5;
   box-shadow: 0px -2px 8px rgba(0,0,0,0.3);
   z-index: 1000;
 }
@@ -172,7 +168,7 @@ select {
   right: 1rem;
   border: none;
   background: transparent;
-  color: #f87171; /* red-400 */
+  color: #f87171;
   font-size: 1.25rem;
   cursor: pointer;
 }
@@ -188,14 +184,55 @@ select {
   font-size: 1.1rem;
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-  background: linear-gradient(135deg, #22c55e, #16a34a); /* bright green */
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
-
 .btn-convert:hover {
-  background: linear-gradient(135deg, #16a34a, #15803d); /* deeper green */
+  background: linear-gradient(135deg, #16a34a, #15803d);
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0px 6px 14px rgba(0,0,0,0.5), 0 0 12px #22c55e88;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+  .card {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .btn,
+  .btn-convert,
+  .link {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
+  .input,
+  select {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.4rem;
+  }
+  .btn,
+  .btn-convert,
+  .link {
+    font-size: 0.9rem;
+    padding: 0.65rem 0.9rem;
+  }
+  .input,
+  select {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
 }
