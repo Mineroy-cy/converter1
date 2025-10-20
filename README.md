@@ -279,9 +279,9 @@ export default class BinaryConverter extends Converter {
   }
 }
 What it does at a glance
-•	BinaryConverter extends a base class Converter, gaining its properties (notably this.value).
-•	toDecimal(): Treats this.value as a binary string and converts it to a decimal number.
-•	fromDecimal(decimal): Converts a decimal number to its binary string representation.
+-BinaryConverter extends a base class Converter, gaining its properties (notably this.value).
+-toDecimal(): Treats this.value as a binary string and converts it to a decimal number.
+-fromDecimal(decimal): Converts a decimal number to its binary string representation.
 Key details and behavior
 •	toDecimal()
 o	Uses parseInt(this.value, 2) to interpret the value as base-2 (binary) and return a decimal number.
