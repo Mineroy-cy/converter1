@@ -4,7 +4,7 @@ export default class DecimalConverter extends Converter {
   toDecimal() {
     return Number(this.value);
   }
-
+//hello
   static toBinary(decimal) {
     return decimal.toString(2);
   }
