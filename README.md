@@ -312,11 +312,6 @@ Minimal example of behavior
 - BinaryConverter.fromDecimal(11) returns "1011".
 
 
-
-## 📄 License
-
-This project is part of a personal portfolio. Please refer to the repository license for usage terms.
-
 ## 🤝 Contributing
 
-This appears to be a personal project. If you'd like to contribute or suggest improvements, please create an issue or pull request in the repository.
+There are 5 active contributers to the project .
