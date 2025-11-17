@@ -1,11 +1,13 @@
+// models/BinaryConverter.js
 import Converter from "./Converter";
+import { baseToDecimal, decimalToBase } from "../utils/fractionParser";
 
 export default class BinaryConverter extends Converter {
   toDecimal() {
-    return parseInt(this.value, 2);
+    return baseToDecimal(this.value, 2);
   }
 
   static fromDecimal(decimal) {
-    return decimal.toString(2);
+    return decimalToBase(decimal, 2);
   }
 }
